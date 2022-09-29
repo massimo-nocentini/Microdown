@@ -28,7 +28,6 @@ MicHTMLCanvas >> newMicStreamOn: aString [
 
 	^ MicOutputStream new 
 		setStream: (WriteStream on: aString);
-		"nextPutAll: aString;"
 		yourself
 ]
 

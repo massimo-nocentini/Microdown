@@ -53,9 +53,8 @@ MicHTMLStylerOpenCommand >> isValidMic: aString [
 	"Answer <true> if aString is a valid Microdown file (determined by its extension)"
 	
 	| fileRef |
-	
 	fileRef := aString asFileReference.
-	^ fileRef exists and: [ fileRef extension asLowercase = 'mic'  ]
+	^ fileRef exists and: [ fileRef extension asLowercase = 'md' ]
 ]
 
 { #category : #execution }

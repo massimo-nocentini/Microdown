@@ -89,7 +89,7 @@ MicGitHubRessourceReference >> extractFolderReferencesFrom: response [
 MicGitHubRessourceReference >> extractMicrodownDocReferencesFrom: response [
 	| docs path |
 	docs := (response at: #tree) select: [ :elem | 
-		(elem at: #type) = #blob and:[ #(md mic) includes: ((elem at: #path) copyAfterLast: $.) ]].
+		(elem at: #type) = #blob and:[ #(md MD) includes: ((elem at: #path) copyAfterLast: $.) ]].
 	docs ifEmpty: [ ^#() ].
 	path := self pathStringForRawAccess.
 	^ docs collect: [ :doc |  MicResourceReference fromUri: path, '/', (doc at: #path)]

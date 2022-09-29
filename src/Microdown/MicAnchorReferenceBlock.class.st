@@ -58,8 +58,8 @@ MicAnchorReferenceBlock >> referenceAsHTML [
 	| ref |
 	self flag: #todo.
 	ref := self reference.
-	(ref endsWith: '.mic')
+	(ref endsWith: '.md')
 		ifTrue: [ ref := (ref copyUpToLast: $.) , '.html' ]
-		ifFalse: [ Error signal: 'Reference : ' , ref , ' should end with .pillar or .pier' ].
+		ifFalse: [ Error signal: 'Reference : ' , ref , ' should end with .md' ].
 	^ ref
 ]

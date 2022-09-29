@@ -54,7 +54,7 @@ MicTextualMicrodownExporter >> contents [
 
 { #category : #io }
 MicTextualMicrodownExporter >> folderName [
-	^ 'mic'
+	^ 'microdown'
 ]
 
 { #category : #accessing }
